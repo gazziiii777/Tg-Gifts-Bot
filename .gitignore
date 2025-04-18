@@ -3,5 +3,8 @@
 .env
 **/__pycache__/
 test.py
+test2.py
+test3.py
 app.log
 my_session.session
+data/

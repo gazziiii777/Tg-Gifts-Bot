@@ -1,10 +1,16 @@
 from tortoise import fields, models
 
-class Message(models.Model):
+class Gifts(models.Model):
     id = fields.IntField(pk=True)
-    user_id = fields.BigIntField()
-    text = fields.TextField()
-    created_at = fields.DatetimeField(auto_now_add=True)
+    gift_id = fields.BigIntField()
+    convert_stars= fields.BigIntField()
+    sold_out = fields.BooleanField()  
+    limited = fields.BooleanField()  
+    gift_id = fields.BigIntField()
+    # logo = fields.TextField()
+    availability_remains = fields.BigIntField()
+    availability_total = fields.BigIntField()
+    # created_at = fields.DatetimeField(auto_now_add=True)
 
     class Meta:
-        table = "messages"
+        table = "gifts"
